@@ -9,7 +9,7 @@
 	
 	<!-- Arquivo principal da aplicação -->
 	<welcome-file-list>
-		<welcome-file>paes//index.xhtml</welcome-file>
+		<welcome-file>pages/index.xhtml</welcome-file>
 	</welcome-file-list>
 
 </web-app>
