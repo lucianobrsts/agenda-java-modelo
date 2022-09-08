@@ -11,7 +11,6 @@ public class Colaborador {
 	}
 
 	public Colaborador(String nome, String observacao, Servico servico) {
-		super();
 		this.nome = nome;
 		this.observacao = observacao;
 		this.servico = servico;
