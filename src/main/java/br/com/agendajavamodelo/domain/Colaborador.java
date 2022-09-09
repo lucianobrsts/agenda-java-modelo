@@ -1,6 +1,8 @@
 package br.com.agendajavamodelo.domain;
 
-public class Colaborador {
+public class Colaborador extends AbstractEntity {
+
+	private static final long serialVersionUID = -994877661371176228L;
 
 	private String nome;
 	private String observacao;

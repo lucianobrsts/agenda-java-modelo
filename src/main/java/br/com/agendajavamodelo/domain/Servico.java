@@ -2,7 +2,9 @@ package br.com.agendajavamodelo.domain;
 
 import java.util.Date;
 
-public class Servico {
+public class Servico extends AbstractEntity {
+
+	private static final long serialVersionUID = -9040048787327789081L;
 
 	private String descricao;
 	private String observacao;

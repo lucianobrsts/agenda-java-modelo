@@ -2,7 +2,9 @@ package br.com.agendajavamodelo.domain;
 
 import java.util.Date;
 
-public class Cliente {
+public class Cliente extends AbstractEntity {
+
+	private static final long serialVersionUID = 268271021148204370L;
 
 	private String nome;
 	private Date dataNascimento;

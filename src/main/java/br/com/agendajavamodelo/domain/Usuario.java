@@ -1,6 +1,8 @@
 package br.com.agendajavamodelo.domain;
 
-public class Usuario {
+public class Usuario extends AbstractEntity {
+
+	private static final long serialVersionUID = 8235559218442134134L;
 
 	private String nome;
 	private String login;
