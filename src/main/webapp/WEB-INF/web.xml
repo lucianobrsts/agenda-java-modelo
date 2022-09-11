@@ -11,5 +11,12 @@
 	<welcome-file-list>
 		<welcome-file>pages/index.xhtml</welcome-file>
 	</welcome-file-list>
+	
+	<!-- Uso de ícones -->
+	<context-param>
+		<param-name>primefaces.FONT_AWESOME</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	
 
 </web-app>
