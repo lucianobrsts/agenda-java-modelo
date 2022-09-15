@@ -1,10 +1,15 @@
 package br.com.agendajavamodelo.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper=false)
+@Entity
+@Table(name = "name")
 public class Usuario extends AbstractEntity {
 
 	private static final long serialVersionUID = 8235559218442134134L;
