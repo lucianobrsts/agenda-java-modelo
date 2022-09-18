@@ -1,5 +1,6 @@
 package br.com.agendajavamodelo.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -9,22 +10,18 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper=false)
 @Entity
-@Table(name = "name")
+@Table(name = "usuario")
 public class Usuario extends AbstractEntity {
 
 	private static final long serialVersionUID = 8235559218442134134L;
 
+	@Column(name = "nome", nullable = false, length = 60)
 	private String nome;
+	
+	@Column(name = "login", nullable = false, length = 12)
 	private String login;
-	private String senha;
-
-	public Usuario() {
-	}
-
-	public Usuario(String nome, String login, String senha) {
-		this.nome = nome;
-		this.login = login;
-		this.senha = senha;
-	}
+	
+	@Column(name = "password")
+	private String password;
 
 }
