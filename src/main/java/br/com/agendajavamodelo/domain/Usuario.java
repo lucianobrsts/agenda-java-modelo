@@ -8,7 +8,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 @Entity
 @Table(name = "usuario")
 public class Usuario extends AbstractEntity {
@@ -17,11 +17,22 @@ public class Usuario extends AbstractEntity {
 
 	@Column(name = "nome", nullable = false, length = 60)
 	private String nome;
-	
+
 	@Column(name = "login", nullable = false, length = 12)
 	private String login;
-	
+
 	@Column(name = "password")
 	private String password;
+	
+	public Usuario() {
+		
+	}
+
+	public Usuario(String nome, String login, String password) {
+		super();
+		this.nome = nome;
+		this.login = login;
+		this.password = password;
+	}
 
 }
