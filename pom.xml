@@ -83,7 +83,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.3.11.Final</version>
+			<version>5.6.5.Final</version>
 		</dependency>
 
 		<!-- Hibernate Validator - Banco de dados -->
@@ -96,7 +96,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>5.6.11.Final</version>
+			<version>5.6.5.Final</version>
 		</dependency>
 
 		<!-- Project Lombok - Automatica através de anotações o encapsulamento 
