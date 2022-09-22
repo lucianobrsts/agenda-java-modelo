@@ -1,6 +1,9 @@
 package br.com.agendajavamodelo.domain;
 
+import java.math.BigDecimal;
 import java.util.Date;
+
+import javax.persistence.Column;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -8,31 +11,39 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Servico extends AbstractEntity {
+	
+	private static final long serialVersionUID = -7324269491165950070L;
 
-	private static final long serialVersionUID = -9040048787327789081L;
-
+	@Column(name = "descricao", nullable = false, length = 60)
 	private String descricao;
+	
+	@Column(name = "data_do_servico")
+	private Date data_do_servico;
+	
+	@Column(name = "data_do_pagamento")
+	private Date data_do_pagamento;
+	
+	@Column(name = "valor", precision = 7, scale = 2, nullable = false)
+	private BigDecimal valor;
+	
+	@Column(name = "forma_de_pagamento", nullable = false, length = 40)
+	private String forma_de_pagamento;
+	
+	@Column(name = "observacao", length = 100)
 	private String observacao;
-	private Double valor;
-	private String formaPagamento;
-	private Date dataServico;
-	private Date dataPagamento;
-	private Cliente cliente;
-	private Colaborador colaborador;
-
+	
 	public Servico() {
 	}
 
-	public Servico(String descricao, String observacao, Double valor, String formaPagamento, Date dataServico,
-			Date dataPagamento, Cliente cliente, Colaborador colaborador) {
+	public Servico(String descricao, Date data_do_servico, Date data_do_pagamento, BigDecimal valor,
+			String forma_de_pagamento, String observacao) {
+		super();
 		this.descricao = descricao;
-		this.observacao = observacao;
+		this.data_do_servico = data_do_servico;
+		this.data_do_pagamento = data_do_pagamento;
 		this.valor = valor;
-		this.formaPagamento = formaPagamento;
-		this.dataServico = dataServico;
-		this.dataPagamento = dataPagamento;
-		this.cliente = cliente;
-		this.colaborador = colaborador;
+		this.forma_de_pagamento = forma_de_pagamento;
+		this.observacao = observacao;
 	}
 
 }
