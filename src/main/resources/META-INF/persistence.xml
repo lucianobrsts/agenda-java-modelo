@@ -1,28 +1,21 @@
-<persistence xmlns="http://java.sun.com/xml/ns/persistence"
-	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-
-<!-- unidade de persistencia -->
-	<persistence-unit name="agendajavamodelo">
-	
-	<!-- Implementação do JPA, no nesso caso Hibernate -->
+	<!-- unidade de persistencia -->
+	<persistence-unit name="agenda_java_modelo">
+		<!-- Implementação do JPA, no nessa caso Hibernate -->
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		
 		<!-- Aqui são listadas todas as entidades -->
-		<class>br.com.agendajavamodelo.domain.Usuario</class>
-
 		<properties>
-		<!-- Propriedades JDBC -->
-			<property name="hibernate.show._sql" value="true"/>
+			<!-- Propriedades JDBC -->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/agendajavamodelo
-			?useTimezone=true&amp;serverTimezone=UTC"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/agenda_java_modelo
+			?useTimezone=true&amp;serverTimezone=UTC" />
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="123456" />
-			
 			<!-- Configurações específicas do Hibernate -->
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
-			<property name="hibernate.hbm2ddl.auto" value="create"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 		</properties>
