@@ -3,10 +3,14 @@ package br.com.agendajavamodelo.domain;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+@Entity
+@Table(name = "cliente")
 @Data
 @EqualsAndHashCode(callSuper=false)
 public class Cliente extends AbstractEntity{
