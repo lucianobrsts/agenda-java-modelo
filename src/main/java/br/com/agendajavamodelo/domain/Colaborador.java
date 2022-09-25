@@ -1,10 +1,14 @@
 package br.com.agendajavamodelo.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+@Entity
+@Table(name = "colaborador")
 @Data
 @EqualsAndHashCode(callSuper=false)
 public class Colaborador extends AbstractEntity{
