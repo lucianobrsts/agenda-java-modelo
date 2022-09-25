@@ -1,11 +1,19 @@
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	
 	<!-- unidade de persistencia -->
 	<persistence-unit name="agenda_java_modelo">
+	
 		<!-- Implementação do JPA, no nessa caso Hibernate -->
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		
 		<!-- Aqui são listadas todas as entidades -->
+		<class>br.com.agendajavamodelo.domain.Cliente</class>
+		<class>br.com.agendajavamodelo.domain.Colaborador</class>
+		<class>br.com.agendajavamodelo.domain.Servico</class>
+		<class>br.com.agendajavamodelo.domain.Usuario</class>
+		
 		<properties>
 			<!-- Propriedades JDBC -->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
