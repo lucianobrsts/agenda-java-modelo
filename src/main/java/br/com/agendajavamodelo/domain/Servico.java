@@ -4,10 +4,14 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+@Entity
+@Table(name = "colaborador")
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Servico extends AbstractEntity {
